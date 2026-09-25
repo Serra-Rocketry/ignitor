@@ -5,13 +5,13 @@
       "Application": "Pcbnew",
       "Version": "10.0.6"
     },
-    "CreationDate": "2026-09-18T22:19:53-03:00"
+    "CreationDate": "2026-09-25T16:02:12-03:00"
   },
   "GeneralSpecs": {
     "ProjectId": {
       "Name": "pcbcomando",
       "GUID": "70636263-6f6d-4616-9e64-6f2e6b696361",
-      "Revision": "1.1"
+      "Revision": "1.2"
     },
     "Size": {
       "X": 60.05,
@@ -24,47 +24,47 @@
   "DesignRules": [
     {
       "Layers": "Outer",
-      "PadToPad": 0.2,
-      "PadToTrack": 0.2,
+      "PadToPad": 0.127,
+      "PadToTrack": 0.127,
       "TrackToTrack": 0.2,
       "MinLineWidth": 0.2,
-      "TrackToRegion": 0.3,
-      "RegionToRegion": 0.3
+      "TrackToRegion": 0.127,
+      "RegionToRegion": 0.127
     }
   ],
   "FilesAttributes": [
     {
-      "Path": "pcbcomando-F_Cu.gbr",
+      "Path": "pcbcomando-F_Cu.gtl",
       "FileFunction": "Copper,L1,Top",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "pcbcomando-B_Cu.gbr",
+      "Path": "pcbcomando-B_Cu.gbl",
       "FileFunction": "Copper,L2,Bot",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "pcbcomando-F_Silkscreen.gbr",
+      "Path": "pcbcomando-F_Silkscreen.gto",
       "FileFunction": "Legend,Top",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "pcbcomando-B_Silkscreen.gbr",
+      "Path": "pcbcomando-B_Silkscreen.gbo",
       "FileFunction": "Legend,Bot",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "pcbcomando-F_Mask.gbr",
+      "Path": "pcbcomando-F_Mask.gts",
       "FileFunction": "SolderMask,Top",
       "FilePolarity": "Negative"
     },
     {
-      "Path": "pcbcomando-B_Mask.gbr",
+      "Path": "pcbcomando-B_Mask.gbs",
       "FileFunction": "SolderMask,Bot",
       "FilePolarity": "Negative"
     },
     {
-      "Path": "pcbcomando-Edge_Cuts.gbr",
+      "Path": "pcbcomando-Edge_Cuts.gm1",
       "FileFunction": "Profile",
       "FilePolarity": "Positive"
     }
