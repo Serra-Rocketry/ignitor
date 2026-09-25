@@ -1272,7 +1272,7 @@
 				)
 			)
 		)
-		(attr exclude_from_pos_files exclude_from_bom)
+		(attr exclude_from_pos_files exclude_from_bom board_only)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
 			(center 0 0)
@@ -1608,7 +1608,7 @@
 				)
 			)
 		)
-		(attr exclude_from_pos_files exclude_from_bom)
+		(attr exclude_from_pos_files exclude_from_bom board_only)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
 			(center 0 0)
@@ -1733,9 +1733,9 @@
 			)
 		)
 		(property ki_fp_filters "Connector*:*_1x??_*")
-		(path "/7d1f2c9a-4b3e-4f6a-9c2d-8e5b1a3f7c40")
-		(sheetname "/")
-		(sheetfile "pcbignicao.kicad_sch")
+		(path "/509a5e1d-8112-4300-b0f8-9aff2b44f447")
+		(sheetname "Saida_Ignicao_Seguranca")
+		(sheetfile "saida_ignicao_seguranca.kicad_sch")
 		(units
 			(unit
 				(name "A")
@@ -2343,9 +2343,9 @@
 			)
 		)
 		(property ki_fp_filters "Connector*:*_1x??_*")
-		(path "/48706277-031c-49b5-8490-ea9b17d8907a")
-		(sheetname "/")
-		(sheetfile "pcbignicao.kicad_sch")
+		(path "/82b55d96-f770-4864-a4a8-c92f9f9534f9")
+		(sheetname "Alimentacao")
+		(sheetfile "alimentacao.kicad_sch")
 		(units
 			(unit
 				(name "A")
@@ -3096,7 +3096,7 @@
 				)
 			)
 		)
-		(attr exclude_from_pos_files exclude_from_bom)
+		(attr exclude_from_pos_files exclude_from_bom board_only)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
 			(center 0 0)
@@ -3218,9 +3218,9 @@
 			)
 		)
 		(property ki_fp_filters "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm*")
-		(path "/00000000-0000-4000-8000-000000000100")
-		(sheetname "/")
-		(sheetfile "pcbignicao.kicad_sch")
+		(path "/509a5e1d-8112-4300-b0f8-9aff2b44f447")
+		(sheetname "Saida_Ignicao_Seguranca")
+		(sheetfile "saida_ignicao_seguranca.kicad_sch")
 		(units
 			(unit
 				(name "A")
@@ -3448,7 +3448,7 @@
 				)
 			)
 		)
-		(attr exclude_from_pos_files exclude_from_bom)
+		(attr exclude_from_pos_files exclude_from_bom board_only)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
 			(center 0 0)
@@ -3766,9 +3766,9 @@
 			)
 		)
 		(property ki_fp_filters "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm*")
-		(path "/00000000-0000-4000-8000-0000000000f7")
-		(sheetname "/")
-		(sheetfile "pcbignicao.kicad_sch")
+		(path "/dc0ab571-b18c-472d-a232-40f43d8b79ea")
+		(sheetname "Interface")
+		(sheetfile "interface.kicad_sch")
 		(units
 			(unit
 				(name "A")
@@ -3994,7 +3994,7 @@
 				)
 			)
 		)
-		(attr smd exclude_from_bom)
+		(attr smd exclude_from_bom board_only)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
 			(center 0 0)
@@ -4117,9 +4117,9 @@
 				)
 			)
 		)
-		(path "/00000000-0000-4000-8000-0000000000b6")
-		(sheetname "/")
-		(sheetfile "pcbignicao.kicad_sch")
+		(path "/a5dda2e2-0f3f-4b40-9484-fd66448a2dce")
+		(sheetname "Radio_LoRa")
+		(sheetfile "radio_lora.kicad_sch")
 		(units
 			(unit
 				(name "A")
@@ -5113,7 +5113,7 @@
 				)
 			)
 		)
-		(attr smd exclude_from_bom)
+		(attr smd exclude_from_bom board_only)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
 			(center 0 0)
@@ -5220,7 +5220,7 @@
 				)
 			)
 		)
-		(attr smd exclude_from_bom)
+		(attr smd exclude_from_bom board_only)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
 			(center 0 0)
@@ -6039,9 +6039,9 @@
 			)
 		)
 		(property ki_fp_filters "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm*")
-		(path "/00000000-0000-4000-8000-0000000000fb")
-		(sheetname "/")
-		(sheetfile "pcbignicao.kicad_sch")
+		(path "/dc0ab571-b18c-472d-a232-40f43d8b79ea")
+		(sheetname "Interface")
+		(sheetfile "interface.kicad_sch")
 		(units
 			(unit
 				(name "A")
@@ -7295,9 +7295,9 @@
 			)
 		)
 		(property ki_fp_filters "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm*")
-		(path "/00000000-0000-4000-8000-0000000000f2")
-		(sheetname "/")
-		(sheetfile "pcbignicao.kicad_sch")
+		(path "/dc0ab571-b18c-472d-a232-40f43d8b79ea")
+		(sheetname "Interface")
+		(sheetfile "interface.kicad_sch")
 		(units
 			(unit
 				(name "A")
