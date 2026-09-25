@@ -18,6 +18,7 @@ tocada e nada foi enviado (`push`) para o remoto.
 | `0391487` | 2 | Vias de costura SMD 388 → 101 (rev 2.1) + 2 vias de ponte |
 | `ca783c6` | 3 | Paths de folha dos footprints sincronizados (THT/SMD) |
 | `b5f0227` | 3 | Pacote de fabricação do comando padronizado (rev 1.2) + README |
+| — | 2b | Vias de costura SMD eliminadas: 101 → 6 GND (rev 2.2) |
 
 ### `feat/firmware-esp32`
 
@@ -39,15 +40,15 @@ tocada e nada foi enviado (`push`) para o remoto.
 | Placa | Antes | Depois | Espaçamento | DRC |
 | --- | --- | --- | --- | --- |
 | Ignição THT (rev 1.3) | 124 (112 GND) | 55 (43 GND) | ~6–8 mm | 0 desconexões |
-| Ignição SMD (rev 2.1) | 406 (388 GND) | 119 (101 GND) | ~6–8 mm | 0 desconexões |
+| Ignição SMD (rev 2.2) | 406 (388 GND) | 24 (6 GND) | sem costura | 0 desconexões |
 | Comando THT | 22 | 22 (já esparso) | ~4–10 mm | 0 desconexões |
 
-- As vias funcionais (em trilha) foram preservadas; o critério foi distância
-  mínima de 6 mm na borda e 6–8 mm no miolo.
-- No SMD, a redução separou duas ilhas de cobre GND perto de J9/J11; elas
-  foram amarradas ao plano com 2 vias de ponte. A ilha isolada que existia na
-  revisão 2.0 (documentada no README) deixou de existir: **o DRC passou de 1
-  para 0 itens desconectados**.
+- As vias funcionais (em trilha) foram preservadas; o critério da THT foi
+  distância mínima de 6 mm na borda e 6–8 mm no miolo.
+- Na SMD, a pedido, **toda** a malha de costura foi removida (rev 2.2): o
+  plano GND fecha com as 4 vias funcionais e **2 vias de ponte** que amarram
+  as ilhas de cobre perto de J9/J11. O DRC confirma 0 itens desconectados e
+  nenhuma violação nova de cobre.
 - Gerbers, drill e pacotes JLCPCB regenerados; READMEs corrigidos, incluindo a
   inversão de tamanhos de via (0,8/0,4 = costura; 0,6/0,3 = sinal).
 
@@ -118,6 +119,6 @@ Pinagem conferida contra o netlist das 3 placas — **0 divergências**:
 
 ## Estado final
 
-- `feat/pcb-smd-e-organizacao` com 9 commits; `feat/firmware-esp32` com 1.
+- `feat/pcb-smd-e-organizacao` com 10 commits; `feat/firmware-esp32` com 1.
 - Working tree limpo; nenhum push; `main` intacta na `e5424de`.
 - Pendências: Passo 4 (comando SMD) e paridade via GUI nos 3 projetos.
