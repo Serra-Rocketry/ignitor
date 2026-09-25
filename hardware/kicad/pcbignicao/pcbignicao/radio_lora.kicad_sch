@@ -5,7 +5,7 @@
 	(uuid "a5dda2e2-0f3f-4b40-9484-fd66448a2dce")
 	(paper "A4")
 	(title_block
-		(title "Estacao de Ignicao - Radio_LoRa")
+		(title "Estacao de Ignicao (THT) - Radio_LoRa")
 		(date "2026-09-23")
 		(rev "1.2")
 		(company "Serra Rocketry")

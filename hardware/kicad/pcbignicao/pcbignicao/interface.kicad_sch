@@ -5,7 +5,7 @@
 	(uuid "dc0ab571-b18c-472d-a232-40f43d8b79ea")
 	(paper "A4")
 	(title_block
-		(title "Estacao de Ignicao - Interface")
+		(title "Estacao de Ignicao (THT) - Interface")
 		(date "2026-09-23")
 		(rev "1.2")
 		(company "Serra Rocketry")
