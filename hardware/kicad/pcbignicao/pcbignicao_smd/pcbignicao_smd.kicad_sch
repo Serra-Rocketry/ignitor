@@ -5,11 +5,11 @@
 	(uuid "b6806db8-0023-44ae-8b35-5692cafd6852")
 	(paper "A4")
 	(title_block
-		(title "Estacao de Ignicao - LoRa 433 MHz")
-		(date "2026-09-23")
-		(rev "1.2")
+		(title "Estacao de Ignicao (SMD) - LoRa 433 MHz")
+		(date "2026-09-24")
+		(rev "2.0")
 		(company "Serra Rocketry")
-		(comment 1 "PCB pcbignicao v1.2 - JLCPCB 2 camadas 1,6 mm - montagem THT manual")
+		(comment 1 "PCB pcbignicao_smd - JLCPCB 2 camadas 1,6 mm - montagem mista (SMD + THT)")
 	)
 	(lib_symbols
 	)

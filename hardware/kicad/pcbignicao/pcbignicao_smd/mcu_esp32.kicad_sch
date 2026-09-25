@@ -5,10 +5,11 @@
 	(uuid "01bc44fd-6e97-4a31-88f0-c10670563229")
 	(paper "A4")
 	(title_block
-		(title "Estacao de Ignicao - MCU (ESP32 NodeMCU-32S)")
+		(title "Estacao de Ignicao (SMD) - MCU_ESP32")
 		(date "2026-09-24")
 		(rev "2.0")
 		(company "Serra Rocketry")
+		(comment 1 "PCB pcbignicao_smd - JLCPCB 2 camadas 1,6 mm - montagem mista (SMD + THT)")
 	)
 	(lib_symbols
 			(symbol "ignitor:ESP32_NodeMCU-32S"
