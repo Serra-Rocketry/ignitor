@@ -6,8 +6,8 @@
 	(paper "A4")
 	(title_block
 		(title "Estacao de Ignicao (SMD) - Saida_Ignicao_Seguranca")
-		(date "2026-09-24")
-		(rev "2.0")
+		(date "2026-09-25")
+		(rev "2.1")
 		(company "Serra Rocketry")
 		(comment 1 "PCB pcbignicao_smd - JLCPCB 2 camadas 1,6 mm - montagem mista (SMD + THT)")
 	)

@@ -1,4 +1,4 @@
-# PCB Ignição SMD — arquivos de fabricação (revisão 2.0)
+# PCB Ignição SMD — arquivos de fabricação (revisão 2.1)
 
 Versão com componentes SMD e **ESP32 NodeMCU-32S** no lugar do Raspberry Pi Pico.
 
@@ -21,8 +21,8 @@ Versão com componentes SMD e **ESP32 NodeMCU-32S** no lugar do Raspberry Pi Pic
 | Espessura | 1,6 mm |
 | Cobre | 1 oz |
 | Menor trilha | 0,2 mm |
-| Via | 0,8 / 0,4 mm (sinal) e 0,6 / 0,3 mm (costura) |
-| Vias de costura GND | ~380 |
+| Via | 0,8 / 0,4 mm (costura) e 0,6 / 0,3 mm (sinal) |
+| Vias de costura GND | 101 (99 costura + 2 de amarração) |
 | Fiduciais | 3 × FID1..FID3 (1 mm cobre, 2 mm máscara) |
 | Furos de fixação | 4 × M3 (3,2 mm, NPTH) |
 
@@ -97,8 +97,9 @@ RA-02 (~120 mA em transmissão) com folga.
 ## Plano de terra
 
 Zona GND nas duas faces com conexão **sólida** (não alívio térmico) nos pads —
-recomendado para montagem por refluxo. Vias de costura a cada ~3 mm.
+recomendado para montagem por refluxo. Vias de costura a cada ~6–8 mm
+(reduzidas de ~380 para 101 na revisão 2.1, cortando custo de furação).
 
-> Observação honesta: o DRC acusa uma região de cobre do plano sem nenhum pad
-> ligado a ela, num trecho congestionado perto de J9/J11. Ela não afeta nenhum
-> sinal nem pad (todos os pads GND estão conectados), mas está registrada aqui.
+> Nota: o trecho congestionado perto de J9/J11 tinha uma ilha de cobre
+> separada; após a redução, as ilhas remanescentes foram amarradas ao plano
+> com 2 vias de ponte e o DRC fecha com 0 itens desconectados.
