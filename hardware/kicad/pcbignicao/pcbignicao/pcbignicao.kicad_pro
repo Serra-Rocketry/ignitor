@@ -240,7 +240,7 @@
       "internal_id": "",
       "mfg": "",
       "mpn": "",
-      "sch_revision": ""
+      "sch_revision": "1.0"
     },
     "layer_pairs": [],
     "layer_presets": [],
@@ -488,7 +488,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "pcbcomando.kicad_pro",
+    "filename": "pcbignicao.kicad_pro",
     "version": 3
   },
   "net_settings": {
@@ -699,8 +699,8 @@
     "subpart_id_separator": 0,
     "top_level_sheets": [
       {
-        "filename": "pcbcomando.kicad_sch",
-        "name": "pcbcomando",
+        "filename": "pcbignicao.kicad_sch",
+        "name": "pcbignicao",
         "uuid": "b6806db8-0023-44ae-8b35-5692cafd6852"
       }
     ],
@@ -710,7 +710,7 @@
   "sheets": [
     [
       "b6806db8-0023-44ae-8b35-5692cafd6852",
-      "pcbcomando"
+      "pcbignicao"
     ]
   ],
   "text_variables": {},

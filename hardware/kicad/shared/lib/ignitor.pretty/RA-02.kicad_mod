@@ -1,0 +1,241 @@
+(footprint "RA-02"
+	(version 20260206)
+	(generator "ignitor")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "Ai-Thinker Ra-02 LoRa module (Semtech SX1278, 433MHz, IPEX antenna socket), SMD-16 castellated pads, 2.0mm pitch, module 17x16mm. Pad numbers follow the physical module pinout: left column top-to-bottom = pads 1-8 (GND, GND, 3.3V, RESET, DIO0-DIO3); right column top-to-bottom = pads 16-9 (GND, NSS, MOSI, MISO, SCK, DIO5, DIO4, GND). Place module with its digital row over the left column. Pads 3.0x1.4mm extend 1.5mm beyond the module edge for hand soldering.")
+	(tags "LoRa SX1278 Ai-Thinker Ra-02 castellated")
+	(property "Reference" "REF**"
+		(at 0 -11.6 0)
+		(layer "F.SilkS")
+		(uuid "00000000-0000-0000-0000-000000000001")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "RA-02"
+		(at 0 11.6 0)
+		(layer "F.Fab")
+		(uuid "00000000-0000-0000-0000-000000000002")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" "https://docs.ai-thinker.com/en/Ra-02"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "00000000-0000-0000-0000-000000000003")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "LoRa module SX1278 433MHz, SMD-16 castellated, IPEX antenna"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "00000000-0000-0000-0000-000000000004")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_rect
+		(start -9.8 -9.2)
+		(end 9.8 9.2)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "00000000-0000-0000-0000-000000000010")
+	)
+	(fp_rect
+		(start -8 -8.5)
+		(end 8 8.5)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "00000000-0000-0000-0000-000000000011")
+	)
+	(fp_circle
+		(center -5 -6.9)
+		(end -4.15 -6.9)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "00000000-0000-0000-0000-000000000012")
+	)
+	(fp_text user "IPEX"
+		(at -5 -8.15 0)
+		(layer "F.Fab")
+		(uuid "00000000-0000-0000-0000-000000000013")
+		(effects
+			(font
+				(size 0.6 0.6)
+				(thickness 0.1)
+			)
+		)
+	)
+	(fp_circle
+		(center -10.4 -7.0)
+		(end -10.15 -7.0)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(fill yes)
+		(layer "F.SilkS")
+		(uuid "00000000-0000-0000-0000-000000000014")
+	)
+	(fp_text user "1"
+		(at -11.4 -7.0 0)
+		(layer "F.SilkS")
+		(uuid "00000000-0000-0000-0000-000000000015")
+		(effects
+			(font
+				(size 0.7 0.7)
+				(thickness 0.12)
+			)
+		)
+	)
+	(fp_rect
+		(start -10.6 -10.0)
+		(end 10.6 10.0)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "00000000-0000-0000-0000-000000000016")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "00000000-0000-0000-0000-000000000017")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.12)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -8 -7.0)
+		(size 3.0 1.4)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "00000000-0000-0000-0000-000000000101")
+	)
+	(pad "2" smd rect
+		(at -8 -5.0)
+		(size 3.0 1.4)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "00000000-0000-0000-0000-000000000102")
+	)
+	(pad "3" smd rect
+		(at -8 -3.0)
+		(size 3.0 1.4)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "00000000-0000-0000-0000-000000000103")
+	)
+	(pad "4" smd rect
+		(at -8 -1.0)
+		(size 3.0 1.4)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "00000000-0000-0000-0000-000000000104")
+	)
+	(pad "5" smd rect
+		(at -8 1.0)
+		(size 3.0 1.4)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "00000000-0000-0000-0000-000000000105")
+	)
+	(pad "6" smd rect
+		(at -8 3.0)
+		(size 3.0 1.4)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "00000000-0000-0000-0000-000000000106")
+	)
+	(pad "7" smd rect
+		(at -8 5.0)
+		(size 3.0 1.4)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "00000000-0000-0000-0000-000000000107")
+	)
+	(pad "8" smd rect
+		(at -8 7.0)
+		(size 3.0 1.4)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "00000000-0000-0000-0000-000000000108")
+	)
+	(pad "16" smd rect
+		(at 8 -7.0)
+		(size 3.0 1.4)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "00000000-0000-0000-0000-000000000116")
+	)
+	(pad "15" smd rect
+		(at 8 -5.0)
+		(size 3.0 1.4)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "00000000-0000-0000-0000-000000000115")
+	)
+	(pad "14" smd rect
+		(at 8 -3.0)
+		(size 3.0 1.4)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "00000000-0000-0000-0000-000000000114")
+	)
+	(pad "13" smd rect
+		(at 8 -1.0)
+		(size 3.0 1.4)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "00000000-0000-0000-0000-000000000113")
+	)
+	(pad "12" smd rect
+		(at 8 1.0)
+		(size 3.0 1.4)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "00000000-0000-0000-0000-000000000112")
+	)
+	(pad "11" smd rect
+		(at 8 3.0)
+		(size 3.0 1.4)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "00000000-0000-0000-0000-000000000111")
+	)
+	(pad "10" smd rect
+		(at 8 5.0)
+		(size 3.0 1.4)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "00000000-0000-0000-0000-000000000110")
+	)
+	(pad "9" smd rect
+		(at 8 7.0)
+		(size 3.0 1.4)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "00000000-0000-0000-0000-000000000109")
+	)
+)

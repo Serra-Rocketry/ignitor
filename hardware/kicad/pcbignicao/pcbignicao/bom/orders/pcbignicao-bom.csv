@@ -1,0 +1,16 @@
+Comment,Designator,Footprint,LCSC Part #
+Raspberry_Pi_Pico_THT,A1,raspberry_pi_pico_THT,C7203002
+100nF,C1,Disc_D5.0mm_W2.5mm_P2.50mm,C1620173
+10uF,C2,CP_Radial_D5.0mm_P2.50mm,C503219
+LED_Y,D1,LED_D5.0mm,C2895494
+LED_R,D2,LED_D5.0mm,C2895492
+1N5819,D3,DO-41_SOD81_P10.16mm_Horizontal,C2474
++buzzer,J3,PinHeader_1x01_P2.54mm_Vertical,C492400
+-buzzer,J4,PinHeader_1x01_P2.54mm_Vertical,C492400
+NO,J5,PinHeader_1x01_P2.54mm_Vertical,C492400
+COM,J6,PinHeader_1x01_P2.54mm_Vertical,C492400
+EXT_PWR,J7,PinHeader_1x02_P2.54mm_Vertical,C492401
+RELE,J8,PinHeader_1x03_P2.54mm_Vertical,C2937625
+LED_BTN,J9,PinHeader_1x02_P2.54mm_Vertical,C492401
+330,"R1,R2,R3",Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal,C2935230
+Ra-02,U1,RA-02_THT,C90039

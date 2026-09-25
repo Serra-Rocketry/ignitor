@@ -1,0 +1,274 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "b6806db8-0023-44ae-8b35-5692cafd6852")
+	(paper "A4")
+	(title_block
+		(title "Estacao de Ignicao - LoRa 433 MHz")
+		(date "2026-09-23")
+		(rev "1.2")
+		(company "Serra Rocketry")
+		(comment 1 "PCB pcbignicao v1.2 - JLCPCB 2 camadas 1,6 mm - montagem THT manual")
+	)
+	(lib_symbols
+	)
+	(sheet
+		(at 12.7 12.7)
+		(size 127.0 60.0)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "82b55d96-f770-4864-a4a8-c92f9f9534f9")
+		(property "Sheetname" "Alimentacao"
+			(at 12.7 12.0384 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "alimentacao.kicad_sch"
+			(at 12.7 72.7596 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "pcbignicao"
+				(path "/b6806db8-0023-44ae-8b35-5692cafd6852"
+					(page "2")
+			)
+		)
+	)
+	)
+	(sheet
+		(at 12.7 76.7)
+		(size 127.0 62.0)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "01bc44fd-6e97-4a31-88f0-c10670563229")
+		(property "Sheetname" "MCU_Pico"
+			(at 12.7 76.0384 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "mcu_pico.kicad_sch"
+			(at 12.7 138.7596 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "pcbignicao"
+				(path "/b6806db8-0023-44ae-8b35-5692cafd6852"
+					(page "3")
+			)
+		)
+	)
+	)
+	(sheet
+		(at 12.7 142.7)
+		(size 127.0 62.0)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "a5dda2e2-0f3f-4b40-9484-fd66448a2dce")
+		(property "Sheetname" "Radio_LoRa"
+			(at 12.7 142.0384 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "radio_lora.kicad_sch"
+			(at 12.7 204.7596 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "pcbignicao"
+				(path "/b6806db8-0023-44ae-8b35-5692cafd6852"
+					(page "4")
+			)
+		)
+	)
+	)
+	(sheet
+		(at 152.4 12.7)
+		(size 127.0 62.0)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "509a5e1d-8112-4300-b0f8-9aff2b44f447")
+		(property "Sheetname" "Saida_Ignicao_Seguranca"
+			(at 152.4 12.0384 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "saida_ignicao_seguranca.kicad_sch"
+			(at 152.4 74.7596 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "pcbignicao"
+				(path "/b6806db8-0023-44ae-8b35-5692cafd6852"
+					(page "5")
+			)
+		)
+	)
+	)
+	(sheet
+		(at 152.4 78.7)
+		(size 127.0 62.0)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "dc0ab571-b18c-472d-a232-40f43d8b79ea")
+		(property "Sheetname" "Interface"
+			(at 152.4 78.0384 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "interface.kicad_sch"
+			(at 152.4 140.7596 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "pcbignicao"
+				(path "/b6806db8-0023-44ae-8b35-5692cafd6852"
+					(page "6")
+			)
+		)
+	)
+	)
+	(sheet
+		(at 152.4 144.7)
+		(size 127.0 62.0)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "349c2cd4-a61c-416b-a9cd-0748559e6001")
+		(property "Sheetname" "Expansao"
+			(at 152.4 144.0384 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "expansao.kicad_sch"
+			(at 152.4 206.7596 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "pcbignicao"
+				(path "/b6806db8-0023-44ae-8b35-5692cafd6852"
+					(page "7")
+			)
+		)
+	)
+	)
+	(embedded_fonts no)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+)

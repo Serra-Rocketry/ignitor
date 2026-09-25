@@ -1,0 +1,15 @@
+Ref,Val,Package,PosX,PosY,Rot,Side
+"A1","Raspberry_Pi_Pico_THT","raspberry_pi_pico_THT",150.410000,-124.750000,180.000000,top
+"C1","100nF","C_Disc_D5.0mm_W2.5mm_P2.50mm",185.500000,-103.800000,0.000000,top
+"C2","10uF","CP_Radial_D5.0mm_P2.50mm",176.520000,-105.620000,0.000000,top
+"D1","LED_Y","LED_D5.0mm",157.020000,-117.620000,0.000000,top
+"D2","LED_R","LED_D5.0mm",157.020000,-127.120000,0.000000,top
+"D3","1N5819","D_DO-41_SOD81_P10.16mm_Horizontal",140.000000,-129.400000,0.000000,top
+"J3","+buzzer","PinHeader_1x01_P2.54mm_Vertical",172.020000,-121.620000,0.000000,top
+"J4","-buzzer","PinHeader_1x01_P2.54mm_Vertical",177.020000,-121.620000,0.000000,top
+"J5","NO","PinHeader_1x01_P2.54mm_Vertical",182.020000,-121.620000,0.000000,top
+"J6","COM","PinHeader_1x01_P2.54mm_Vertical",187.020000,-121.620000,0.000000,top
+"J7","EXT_PWR","PinHeader_1x02_P2.54mm_Vertical",187.020000,-125.850000,0.000000,top
+"R1","330","R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",168.020000,-117.620000,0.000000,top
+"R2","330","R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",168.020000,-127.120000,0.000000,top
+"U1","Ra-02","RA-02_THT",171.020000,-88.120000,0.000000,top

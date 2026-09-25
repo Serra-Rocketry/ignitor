@@ -1,0 +1,33 @@
+(version 1)
+
+(rule "JLCPCB 2-layer: track width min 0.127mm"
+	(constraint track_width (min 0.127mm))
+)
+
+(rule "JLCPCB 2-layer: clearance min 0.127mm"
+	(constraint clearance (min 0.127mm))
+)
+
+(rule "JLCPCB 2-layer: via diameter min 0.45mm"
+	(constraint via_diameter (min 0.45mm))
+)
+
+(rule "JLCPCB 2-layer: annular ring min 0.125mm"
+	(constraint annular_width (min 0.125mm))
+)
+
+(rule "JLCPCB 2-layer: hole size min 0.2mm"
+	(constraint hole_size (min 0.2mm))
+)
+
+(rule "JLCPCB 2-layer: hole to hole min 0.25mm"
+	(constraint hole_to_hole (min 0.25mm))
+)
+
+(rule "JLCPCB 2-layer: copper to board edge min 0.5mm"
+	(constraint edge_clearance (min 0.5mm))
+)
+
+(rule "JLCPCB 2-layer: silkscreen to pad clearance min 0.15mm"
+	(constraint silk_clearance (min 0.15mm))
+)

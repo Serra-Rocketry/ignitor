@@ -1,0 +1,9 @@
+(fp_lib_table
+	(version 7)
+	(lib (name "ignitor")
+		(type "KiCad")
+		(uri "${KIPRJMOD}/../../shared/lib/ignitor.pretty")
+		(options "")
+		(descr "Footprints compartilhados do projeto Ignitor (RA-02, RA-02_THT, ESP32_NodeMCU-32S)")
+	)
+)

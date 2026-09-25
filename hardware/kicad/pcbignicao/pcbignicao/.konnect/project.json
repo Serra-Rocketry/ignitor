@@ -1,0 +1,13 @@
+{
+  "design_rules": [
+    "Trilha de ignição (IGN_A/IGN_B) nunca toca a net GND do MCU em nenhum ponto da placa; passa isolada em série, largura mínima 1,5 mm, separação ≥3 mm de qualquer GND",
+    "Jumper ARM (J10) aberto deve travar o relé em HIGH: pull-up R5 10k no IN do módulo relé ativo-em-BAIXO, ligado ao RELE_ARM, com série para alocar o jumper",
+    "Circuito de continuidade por optoacoplador (PC817) com corrente de teste ≤2 mA (≈100× abaixo do no-fire do e-match), totalmente isolado do GND/bateria de ignição",
+    "4 furos M3 (Ø3,2mm) nos cantos com keep-out de cobre 1mm ao redor; nenhum footprint ou trilha dentro do keep-out",
+    "Nenhum courtyard de footprint pode exceder o contorno da placa (caso J9: reencaixar até 0,2mm da borda); edge clearance 0,3mm (JLCPCB 2 camadas)",
+    "Silks de segurança obrigatórios: ARM (junto ao J10), ESQUIB (junto a J13), RELE-NO e BAT- (junto ao J13), e aviso \"REMOVER JUMPER ARM ANTES DE CONECTAR IGNITOR\""
+  ],
+  "fab_constraints": {},
+  "naming_conventions": {},
+  "sourcing": {}
+}
