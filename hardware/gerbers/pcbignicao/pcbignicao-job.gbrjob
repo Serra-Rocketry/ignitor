@@ -5,13 +5,13 @@
       "Application": "Pcbnew",
       "Version": "10.0.6"
     },
-    "CreationDate": "2026-09-24T16:35:56-03:00"
+    "CreationDate": "2026-09-25T15:20:54-03:00"
   },
   "GeneralSpecs": {
     "ProjectId": {
       "Name": "pcbignicao",
       "GUID": "70636269-676e-4696-9361-6f2e6b696361",
-      "Revision": "1.1"
+      "Revision": "1.3"
     },
     "Size": {
       "X": 66.05,

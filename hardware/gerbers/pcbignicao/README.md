@@ -1,4 +1,4 @@
-# PCB Ignição — arquivos de fabricação (revisão 2.0)
+# PCB Ignição — arquivos de fabricação (revisão 1.3)
 
 ## Arquivos
 
@@ -23,6 +23,7 @@
 | Camadas | 2 |
 | Espessura | 1,6 mm |
 | Cobre | 1 oz |
+| Via | 0,8 / 0,4 mm (costura) e 0,6 / 0,3 mm (sinal) |
 | Furo mínimo | 0,3 mm (via) |
 | Menor trilha | 0,2 mm (sinal) / 0,35 mm (alimentação) |
 | Menor anel anular | 0,15 mm |
@@ -52,6 +53,6 @@ via mín. 0,45/0,2 mm, anel mín. 0,125 mm).
 
 ## Plano de terra
 
-Zona GND contínua nas duas faces, com **110 vias de costura** distribuídas
-automaticamente (124 vias no total). Alívio térmico nos pads THT para facilitar
+Zona GND contínua nas duas faces, com **43 vias de costura** (55 vias no
+total), espaçamento de ~6–8 mm. Alívio térmico nos pads THT para facilitar
 a solda manual.
