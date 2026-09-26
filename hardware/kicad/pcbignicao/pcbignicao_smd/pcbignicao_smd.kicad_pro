@@ -240,7 +240,7 @@
       "internal_id": "",
       "mfg": "",
       "mpn": "",
-      "sch_revision": "1.0"
+      "sch_revision": "2.2"
     },
     "layer_pairs": [],
     "layer_presets": [],
@@ -711,6 +711,30 @@
     [
       "b6806db8-0023-44ae-8b35-5692cafd6852",
       "pcbignicao_smd"
+    ],
+    [
+      "82b55d96-f770-4864-a4a8-c92f9f9534f9",
+      "Alimentacao"
+    ],
+    [
+      "01bc44fd-6e97-4a31-88f0-c10670563229",
+      "MCU_ESP32"
+    ],
+    [
+      "a5dda2e2-0f3f-4b40-9484-fd66448a2dce",
+      "Radio_LoRa"
+    ],
+    [
+      "509a5e1d-8112-4300-b0f8-9aff2b44f447",
+      "Saida_Ignicao_Seguranca"
+    ],
+    [
+      "dc0ab571-b18c-472d-a232-40f43d8b79ea",
+      "Interface"
+    ],
+    [
+      "349c2cd4-a61c-416b-a9cd-0748559e6001",
+      "Expansao"
     ]
   ],
   "text_variables": {},
