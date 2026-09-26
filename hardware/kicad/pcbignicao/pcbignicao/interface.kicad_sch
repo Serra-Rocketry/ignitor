@@ -1332,7 +1332,7 @@
 		(uuid "9f470488-05e0-466c-896b-0025d9eba674")
 	)
 	(text "INTERFACE — BUZZER"
-		(at 124.714 143.002 0)
+		(at 124.714 132.842 0)
 		(effects
 			(font
 				(size 2 2)
@@ -1343,7 +1343,7 @@
 		(uuid "177b9a54-1e48-4b77-b88f-5e89122dc9e8")
 	)
 	(text "INTERFACE — LEDS DE STATUS"
-		(at 24.384 117.348 0)
+		(at 24.384 114.808 0)
 		(effects
 			(font
 				(size 2 2)
@@ -1354,7 +1354,7 @@
 		(uuid "a119107b-b105-4f81-bfce-ce4574ce94e2")
 	)
 	(text "BOTÃO DE IGNIÇÃO"
-		(at 193 112 0)
+		(at 193 109.46 0)
 		(effects
 			(font
 				(size 2 2)
@@ -1365,7 +1365,7 @@
 		(uuid "d1eef210-0e90-4b6c-ad75-df343d7aae33")
 	)
 	(text "INTERFACE — LED DO BOTÃO"
-		(at 215.9 151.13 0)
+		(at 215.9 144.78 0)
 		(effects
 			(font
 				(size 2 2)
@@ -3100,14 +3100,14 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 154.94 139.7 90)
+		(at 160.02 152.4 90)
 		(unit 1)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "88d8d232-d39c-4648-b646-6f1ef1f4bfeb")
 		(property "Reference" "#PWR018"
-			(at 161.29 139.7 0)
+			(at 166.37 152.4 0)
 			(hide yes)
 			(effects
 				(font
@@ -3116,7 +3116,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 158.75 139.7 0)
+			(at 163.83 152.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3124,7 +3124,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 154.94 139.7 0)
+			(at 160.02 152.4 0)
 			(hide yes)
 			(effects
 				(font
@@ -3133,7 +3133,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 154.94 139.7 0)
+			(at 160.02 152.4 0)
 			(hide yes)
 			(effects
 				(font
@@ -3142,7 +3142,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 154.94 139.7 0)
+			(at 160.02 152.4 0)
 			(hide yes)
 			(effects
 				(font
@@ -3161,11 +3161,11 @@
 	)
 	(polyline
 		(pts
-			(xy 23.07 117.88)
-			(xy 75.77 117.88)
-			(xy 75.77 143.08)
-			(xy 23.07 143.08)
-			(xy 23.07 117.88)
+			(xy 19.05 115.57)
+			(xy 78.74 115.57)
+			(xy 78.74 144.78)
+			(xy 19.05 144.78)
+			(xy 19.05 115.57)
 		)
 		(stroke
 			(width 0.1524)
@@ -3179,11 +3179,11 @@
 	)
 	(polyline
 		(pts
-			(xy 130.57 147.52)
-			(xy 153.57 147.52)
-			(xy 153.57 169.02)
-			(xy 130.57 169.02)
-			(xy 130.57 147.52)
+			(xy 128.27 143.51)
+			(xy 157.48 143.51)
+			(xy 157.48 166.37)
+			(xy 128.27 166.37)
+			(xy 128.27 143.51)
 		)
 		(stroke
 			(width 0.1524)
@@ -3197,11 +3197,11 @@
 	)
 	(polyline
 		(pts
-			(xy 193.2 113)
-			(xy 215.8 113)
-			(xy 215.8 136)
-			(xy 193.2 136)
-			(xy 193.2 113)
+			(xy 190.5 110.49)
+			(xy 218.44 110.49)
+			(xy 218.44 123.19)
+			(xy 190.5 123.19)
+			(xy 190.5 110.49)
 		)
 		(stroke
 			(width 0.1524)
@@ -3218,5 +3218,21 @@
 		(path "/"
 			(page "1")
 		)
+	)
+	(junction
+		(at 154.94 139.7)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5c99a115-ce24-4300-a11d-c78924d3a6ad")
+	)
+	(wire
+		(pts
+			(xy 154.94 139.7) (xy 160.02 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "38b1d6f6-386e-42f6-951f-6deb8d171871")
 	)
 )
