@@ -1075,171 +1075,121 @@
 			)
 			(embedded_fonts no)
 		)
-	(symbol "power:PWR_FLAG"
-			(power global)
-			(pin_names
-				(offset 0)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "#FLG"
-				(at 0 4.45 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "PWR_FLAG"
-				(at 0 3.048 0)
-				(show_name no)
-				(do_not_autoplace yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Power flag, stands for power net flag"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "power-flag"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "PWR_FLAG_0_1"
-				(pin power_out line
-					(at 0 0 90)
-					(length 0)
+			(symbol "power:PWR_FLAG"
+				(power global)
+				(pin_numbers
 					(hide yes)
-					(name "pwr"
-						(effects
-							(font
-								(size 1.27 1.27)
+				)
+				(pin_names
+					(offset 0)
+					(hide yes)
+				)
+				(exclude_from_sim no)
+				(in_bom yes)
+				(on_board yes)
+				(in_pos_files yes)
+				(duplicate_pin_numbers_are_jumpers no)
+				(property "Reference" "#FLG"
+					(at 0 1.905 0)
+					(show_name no)
+					(do_not_autoplace no)
+					(hide yes)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(property "Value" "PWR_FLAG"
+					(at 0 3.81 0)
+					(show_name no)
+					(do_not_autoplace no)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(property "Footprint" ""
+					(at 0 0 0)
+					(show_name no)
+					(do_not_autoplace no)
+					(hide yes)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(property "Datasheet" ""
+					(at 0 0 0)
+					(show_name no)
+					(do_not_autoplace no)
+					(hide yes)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(property "Description" "Special symbol for telling ERC where power comes from"
+					(at 0 0 0)
+					(show_name no)
+					(do_not_autoplace no)
+					(hide yes)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(property "ki_keywords" "flag power"
+					(at 0 0 0)
+					(show_name no)
+					(do_not_autoplace no)
+					(hide yes)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(symbol "PWR_FLAG_0_0"
+					(pin power_out line
+						(at 0 0 90)
+						(length 0)
+						(name ""
+							(effects
+								(font
+									(size 1.27 1.27)
+								)
+							)
+						)
+						(number "1"
+							(effects
+								(font
+									(size 1.27 1.27)
+								)
 							)
 						)
 					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
+				)
+				(symbol "PWR_FLAG_0_1"
+					(polyline
+						(pts
+							(xy 0 0) (xy 0 1.27) (xy -1.016 1.905) (xy 0 2.54) (xy 1.016 1.905) (xy 0 1.27)
+						)
+						(stroke
+							(width 0)
+							(type default)
+						)
+						(fill
+							(type none)
 						)
 					)
 				)
+				(embedded_fonts no)
 			)
-			(symbol "PWR_FLAG_1_1"
-				(polyline
-					(pts
-						(xy 0 0)
-						(xy 0.762 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 -1.29)
-						(xy -0.762 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.456 0.372)
-						(xy 0.684 0.145)
-					)
-					(stroke
-						(width 0.089)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.684 0.145)
-						(xy 0.508 0.321)
-					)
-					(stroke
-						(width 0.089)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.762 0)
-						(xy 0.456 0.377)
-					)
-					(stroke
-						(width 0.089)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 	)
 	(junction
 		(at 34.29 101.6)
@@ -2095,7 +2045,7 @@
 	)
 	(symbol
 		(lib_id "PCM_SparkFun-PowerSymbol:3.3V")
-		(at 49.53 27.94 0)
+		(at 62.23 27.94 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2104,7 +2054,7 @@
 		(fields_autoplaced)
 		(uuid "00000000-0000-4000-8000-000000000002")
 		(property "Reference" "#PWR001"
-			(at 49.53 31.75 0)
+			(at 62.23 31.75 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2115,7 +2065,7 @@
 			)
 		)
 		(property "Value" "3.3V"
-			(at 49.53 24.13 0)
+			(at 62.23 24.13 0)
 			(show_name no)
 			(do_not_autoplace yes)
 			(effects
@@ -2125,7 +2075,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 49.53 27.94 0)
+			(at 62.23 27.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2136,7 +2086,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 49.53 27.94 0)
+			(at 62.23 27.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2147,7 +2097,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"3.3V\""
-			(at 49.53 27.94 0)
+			(at 62.23 27.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2328,14 +2278,14 @@
 	)
 	(symbol
 		(lib_id "power:PWR_FLAG")
-		(at 34.29 25.4 0)
+		(at 21.59 26.67 0)
 		(unit 1)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "b1df2de8-b981-4566-9da2-82eea8737acf")
 		(property "Reference" "#PWR014"
-			(at 34.29 20.95 0)
+			(at 21.59 22.22 0)
 			(hide yes)
 			(effects
 				(font
@@ -2344,7 +2294,7 @@
 			)
 		)
 		(property "Value" "PWR_FLAG"
-			(at 34.29 22.352 0)
+			(at 21.59 23.622 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2352,7 +2302,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 34.29 25.4 0)
+			(at 21.59 26.67 0)
 			(hide yes)
 			(effects
 				(font
@@ -2361,7 +2311,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 34.29 25.4 0)
+			(at 21.59 26.67 0)
 			(hide yes)
 			(effects
 				(font
@@ -2370,7 +2320,7 @@
 			)
 		)
 		(property "Description" "Power flag, stands for power net flag"
-			(at 34.29 25.4 0)
+			(at 21.59 26.67 0)
 			(hide yes)
 			(effects
 				(font
@@ -2394,4 +2344,36 @@
 		)
 	)
 
+	(junction
+		(at 49.53 27.94)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "843020d8-1ab2-4405-b345-2651fb1988b5")
+	)
+	(wire
+		(pts
+			(xy 49.53 27.94) (xy 62.23 27.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ae99a674-faf1-426c-805e-f587476a87e7")
+	)
+	(junction
+		(at 34.29 25.4)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "943039c9-825a-45ef-b1de-d86bbe007e98")
+	)
+	(wire
+		(pts
+			(xy 34.29 25.4) (xy 21.59 26.67)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "615c23a8-1d51-4513-9c20-5fc6a7c79b6f")
+	)
 )
