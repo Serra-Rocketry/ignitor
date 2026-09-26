@@ -117,8 +117,30 @@ Pinagem conferida contra o netlist das 3 placas — **0 divergências**:
 - O README da estação de comando cita um LED de botão que não existe na placa
   (removido da tabela de pinagem).
 
+## Limpeza visual e ERC (pós-revisão)
+
+A pedido, os esquemas das 3 placas foram desaninhados e o ERC zerado:
+
+| Projeto | Anotações realocadas | Caixas reencaixadas | Power flags movidos | ERC |
+| --- | --- | --- | --- | --- |
+| Ignição SMD | 10 | 6 | 5 | 7 → **0** |
+| Ignição THT | 11 | 7 | 5 | 5 → **0** |
+| Comando | 6 | — | 2 | 5 → **0** |
+
+- As notas/títulos foram movidos para áreas livres (sem cobrir fios/símbolos) e
+  as caixas coloridas redimensionadas em volta dos blocos.
+- Os power flags que ficavam sobre U2/U3/J11 foram deslocados com um stub de
+  fio e junção, preservando a conexão.
+- `C1/C2/PWR_FLAG` foram sincronizados com as bibliotecas do sistema.
+- **Causa raiz do ERC**: a biblioteca `ignitor.kicad_sym` usava a versão de
+  formato de esquema (`20260306`) e não carregava no KiCad — corrigida para
+  `20251024`, a versão do formato de biblioteca.
+- Netlists revalidados: idênticos antes/depois nos 3 projetos.
+- Commits: `edbfc08`, `db8289d`, `0790f62`, `480bfc0`.
+
 ## Estado final
 
-- `feat/pcb-smd-e-organizacao` com 10 commits; `feat/firmware-esp32` com 1.
+- `feat/pcb-smd-e-organizacao` com 14 commits; `feat/firmware-esp32` com 1.
 - Working tree limpo; nenhum push; `main` intacta na `e5424de`.
 - Pendências: Passo 4 (comando SMD) e paridade via GUI nos 3 projetos.
+
