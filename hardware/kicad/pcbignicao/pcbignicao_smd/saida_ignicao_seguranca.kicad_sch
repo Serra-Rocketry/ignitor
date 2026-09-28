@@ -2686,7 +2686,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_SO:SOP-4_4.4x2.6mm_P1.27mm"
+		(property "Footprint" "Package_DIP:DIP-4_W7.62mm_LongPads"
 			(at 231.14 140.97 0)
 			(hide yes)
 			(effects
@@ -2780,7 +2780,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_SO:SOP-4_4.4x2.6mm_P1.27mm"
+		(property "Footprint" "Package_DIP:DIP-4_W7.62mm_LongPads"
 			(at 231.14 149.86 0)
 			(hide yes)
 			(effects
