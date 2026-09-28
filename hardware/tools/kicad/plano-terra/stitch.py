@@ -59,6 +59,13 @@ def main(src, out, pitch=4.0, via_d=0.8, drill=0.4, clearance=0.3, edge=1.2, reg
                 pos = p.GetPosition()
                 holes.append((pos.x / MM, pos.y / MM, p.GetDrillSize().x / MM / 2.0 + 0.35,
                               fp.GetReference()))
+    # as vias ja existentes tambem sao furos: sem isso, grades finas geram
+    # avisos de hole_to_hole e holes_co_located
+    for t in b.GetTracks():
+        if t.GetClass() != "PCB_VIA":
+            continue
+        pos = t.GetPosition()
+        holes.append((pos.x / MM, pos.y / MM, t.GetDrillValue() / MM / 2.0 + 0.35, "via"))
 
     placed = 0
     tried = 0
