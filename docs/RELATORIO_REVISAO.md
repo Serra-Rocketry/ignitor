@@ -144,3 +144,21 @@ A pedido, os esquemas das 3 placas foram desaninhados e o ERC zerado:
 - Working tree limpo; nenhum push; `main` intacta na `e5424de`.
 - Pendências: Passo 4 (comando SMD) e paridade via GUI nos 3 projetos.
 
+## Passo 6 — Troca U2/U3 para DIP-4 na ignição SMD (em andamento)
+
+A pedido, os optoacopladores PC817 da placa SMD passam de SOP-4 (SMD,
+montados na JLCPCB) para **DIP-4 THT (solda manual)**:
+
+| Item | Estado |
+| --- | --- |
+| Esquema (`saida_ignicao_seguranca.kicad_sch`) | U2/U3 com `DIP-4_W7.62mm_LongPads` |
+| PCB (`pcbignicao_smd.kicad_pcb`) | Footprint trocado in place pelo `swap_fp_pcb.py` (rede/posição preservadas, 7 trilhas nos pads antigos removidas) |
+| Ferramenta nova | `hardware/tools/kicad/versao-smd/swap_fp_pcb.py` — troca footprint na PCB pelo netlist, mantendo posição/rotação e reatribuindo redes |
+| `stitch.py` | Vias existentes agora entram na lista de furos (evita avisos hole_to_hole/holes_co_located em grades finas) |
+| Pacote JLCPCB | Organizado em `hardware/gerbers/pcbignicao_smd/jlcpcb/` (zip + BOM + CPL + LEIA-ME); ainda da rev 2.2 com U2/U3 em SOP-4 |
+
+**Pendências dessa etapa:** rerrotear as conexões de U2/U3 na PCB (o DIP-4 é
+maior que o SOP-4 e colide com o roteamento atual — DRC com violações), subir a
+revisão para 2.3 e regenerar BOM/CPL/gerbers do pacote `jlcpcb/` com U2/U3
+fora da montagem.
+

@@ -2,11 +2,18 @@
 
 Versão com componentes SMD e **ESP32 NodeMCU-32S** no lugar do Raspberry Pi Pico.
 
+> **⚠️ Status (2026-09-26):** os optoacopladores U2/U3 (PC817) foram trocados de
+> SOP-4 (SMD) para **DIP-4 (THT, solda manual)** no esquema e na PCB. O
+> rerroteio local ainda está pendente e o pacote de envio em `jlcpcb/` ainda
+> reflete a rev 2.2 (U2/U3 em SOP-4 montados) — **regenerar BOM/CPL/zip antes de
+> pedir** ou, no site, remova U2/U3 do BOM/CPL no upload.
+
 ## Arquivos
 
 | Arquivo | Uso |
 | --- | --- |
-| `pcbignicao_smd_jlcpcb.zip` | Gerbers + drill — upload na JLCPCB |
+| `jlcpcb/` | Pacote de envio (zip + BOM + CPL + LEIA-ME) pronto para o site |
+| `pcbignicao_smd_jlcpcb.zip` | Gerbers + drill — upload na JLCPCB (rev 2.2) |
 | `jlcpcb-bom.csv` | BOM para a montagem (só SMD) |
 | `jlcpcb-cpl.csv` | Pick-and-place para a montagem (só SMD) |
 | `pcbignicao_smd-bom.csv` | BOM completa, incluindo os THT |
@@ -30,20 +37,19 @@ Versão com componentes SMD e **ESP32 NodeMCU-32S** no lugar do Raspberry Pi Pic
 
 1. Gerbers em <https://cart.jlcpcb.com/quote> — 2 camadas, 1,6 mm
 2. Ative **PCB Assembly → Economic**
-3. Suba `jlcpcb-bom.csv` e `jlcpcb-cpl.csv`
+3. Suba `jlcpcb/jlcpcb-bom.csv` e `jlcpcb/jlcpcb-cpl.csv`
 4. **Confira na pré-visualização de posicionamento** os itens abaixo — a
    convenção de rotação da JLCPCB difere da do KiCad em alguns encapsulamentos:
 
    | Item | Encapsulamento | O que conferir |
    | --- | --- | --- |
-   | U2, U3 (PC817C) | SOP-4 | Pino 1 / orientação (offset típico ±90°) |
    | D3, D5 | SMA | Catodo (offset típico 180°) |
    | D4 | SOD-123 | Catodo |
    | D1, D2 | LED 0805 | Polaridade |
    | R1..R7, C1, C2 | 0805 | Simétricos, sem risco |
 
-5. **Não** inclua no BOM/CPL: A1 (ESP32), U1 (RA-02), J3..J13 — são THT e você
-   solda depois.
+5. **Não** inclua no BOM/CPL: A1 (ESP32), U1 (RA-02), U2/U3 (PC817 DIP-4) e
+   J3..J13 — são THT e você solda depois.
 
 ## Montagem híbrida — o que você solda
 
@@ -51,6 +57,7 @@ Versão com componentes SMD e **ESP32 NodeMCU-32S** no lugar do Raspberry Pi Pic
 | --- | --- | --- |
 | A1 | ESP32 NodeMCU-32S | Socketado em 2× 1×19 fêmea — troca em segundos |
 | U1 | Módulo LoRa RA-02 | Sobre o adaptador THT, 2× 8 pinos. **Antena antes de energizar** |
+| U2, U3 | Optoacoplador PC817 | DIP-4 (THT), isolam CONT_A/CONT_B e as saídas de ignição |
 | J3, J4 | Buzzer (+) e (−) | Terminais |
 | J5, J6 | Botão NO / COM | Terminais do botão |
 | J7 | EXT_PWR 5 V | Entrada, protegida por D3 |

@@ -44,7 +44,7 @@ O sistema possui duas estacoes independentes conectadas por LoRa 433 MHz:
 
 > O buzzer toca uma melodia via PWM ao final de um ciclo de ignicao bem-sucedido.
 
-### Estacao de Ignicao - ESP32 NodeMCU-32S (placa SMD rev 2.1)
+### Estacao de Ignicao - ESP32 NodeMCU-32S (placa SMD rev 2.2)
 
 Pinagem da `pcbignicao_smd` (footprint DIP-38):
 
@@ -134,3 +134,5 @@ Todas as imagens abaixo usam largura padrao de 320 px para manter consistencia v
 - [fritzing](./fritzing): arquivos de esquematico/layout.
 - [gerbers](./gerbers): arquivos de fabricacao PCB.
 - [images](./images): imagens e esquemas.
+- [kicad](./kicad): projetos KiCad (comando, ignicao THT/SMD e bibliotecas).
+- [tools](./tools): scripts de automacao KiCad (organizacao, roteamento, fabricacao e DRC).
