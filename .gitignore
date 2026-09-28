@@ -3,6 +3,13 @@
 *.bin
 .pio/
 
+# KiCad
+*.lck
+*.bak
+*.kicad_prl
+.history/
+_restore_backup_*/
+
 # Configurações pessoais
 config.h
 credentials.h
@@ -11,6 +18,10 @@ credentials.h
 *.csv
 *.log
 data/raw/
+
+# Exceções: BOM/CPL/posição de fabricação
+!hardware/gerbers/**/*.csv
+!hardware/kicad/**/bom/**/*.csv
 
 test/logs/
 

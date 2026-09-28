@@ -1,0 +1,9 @@
+(sym_lib_table
+	(version 7)
+	(lib (name "ignitor")
+		(type "KiCad")
+		(uri "${KIPRJMOD}/../../shared/lib/ignitor.kicad_sym")
+		(options "")
+		(descr "Simbolos compartilhados do projeto Ignitor (Ra-02, ESP32_NodeMCU-32S)")
+	)
+)

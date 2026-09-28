@@ -1,0 +1,192 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "b6806db8-0023-44ae-8b35-5692cafd6852")
+	(paper "A4")
+	(title_block
+		(title "Estação de Comando — Ignição LoRa 433 MHz")
+		(date "2026-09-25")
+		(rev "1.2")
+		(company "Serra Rocketry")
+		(comment 1 "PCB pcbcomando — JLCPCB 2 camadas 1,6 mm — montagem THT manual")
+	)
+
+	(lib_symbols
+	)
+	(sheet
+		(at 12.7 12.7)
+		(size 64.8 48.3)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "3f433440-b664-44dd-a40f-c3062280f9e4")
+		(property "Sheetname" "Alimentacao"
+			(at 12.7 12.0384 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "alimentacao.kicad_sch"
+			(at 12.7 61.0596 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "pcbcomando"
+				(path "/b6806db8-0023-44ae-8b35-5692cafd6852"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 90.2 12.7)
+		(size 81.3 120.7)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "5fce469d-ec0f-464e-a77b-765f2c81f104")
+		(property "Sheetname" "MCU_Pico"
+			(at 90.2 12.0384 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "mcu_pico.kicad_sch"
+			(at 90.2 133.4596 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "pcbcomando"
+				(path "/b6806db8-0023-44ae-8b35-5692cafd6852"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 184.2 12.7)
+		(size 75 97.8)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "ae80d080-33e2-41ad-b7a5-9289d4e76d3a")
+		(property "Sheetname" "Radio_LoRa"
+			(at 184.2 12.0384 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "radio_lora.kicad_sch"
+			(at 184.2 110.5596 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "pcbcomando"
+				(path "/b6806db8-0023-44ae-8b35-5692cafd6852"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 12.7 146.1)
+		(size 205.8 59.7)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "9f53f91a-80d6-4e24-b64b-d43a339116ea")
+		(property "Sheetname" "Interface"
+			(at 12.7 145.4384 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "interface.kicad_sch"
+			(at 12.7 205.8596 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "pcbcomando"
+				(path "/b6806db8-0023-44ae-8b35-5692cafd6852"
+					(page "5")
+				)
+			)
+		)
+	)
+	(embedded_fonts no)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+
+)

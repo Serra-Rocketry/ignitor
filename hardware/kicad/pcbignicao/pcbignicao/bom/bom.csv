@@ -1,0 +1,16 @@
+Reference,Qty,Value,Footprint,MPN,Manufacturer,LCSC,LC_Stock,Chosen_Distributor,Datasheet,Validated,DNP,Notes
+A1,1,Raspberry_Pi_Pico_THT,raspberry_pi_pico_THT,SC0915,Raspberry Pi,C7203002,,,,,,JLCPCB: Standard PCBA apenas (nao aceita Economic). Modulo em furos passantes (40 pinos) - montagem manual.
+C1,1,100nF,Disc_D5.0mm_W2.5mm_P2.50mm,K104K15X7RF5TH5,Vishay,C1620173,,,,,,MPN original K104K15X7RF5TH5 tem passo 5mm e nao encaixa no footprint P2.50mm - usar a versao P2.5mm (LCSC C1620173).
+C2,1,10uF,CP_Radial_D5.0mm_P2.50mm,UVR1E100MDD,Nichicon,C503219,,,,,,Cap 10uF/50V D5xL11 com passo 2.0mm; footprint P2.50mm - abrir levemente os terminais na montagem.
+D1,1,LED_Y,LED_D5.0mm,L-53YD,Kingbright,C2895494,,,,,,Equivalente LCSC do Kingbright L-53YD (LED amarelo 588nm 5mm).
+D2,1,LED_R,LED_D5.0mm,L-53SRD,Kingbright,C2895492,,,,,,Equivalente LCSC do Kingbright L-53SRD (LED vermelho 5mm).
+D3,1,1N5819,DO-41_SOD81_P10.16mm_Horizontal,1N5819,Diotec,C2474,,,,,,
+J3,1,+buzzer,PinHeader_1x01_P2.54mm_Vertical,PRPC001SAAN-RC,Sullins,C492400,,,,,,Header 1x1 generico - Sullins PRPC001SAAN-RC nao disponivel na LCSC.
+J4,1,-buzzer,PinHeader_1x01_P2.54mm_Vertical,PRPC001SAAN-RC,Sullins,C492400,,,,,,
+J5,1,NO,PinHeader_1x01_P2.54mm_Vertical,PRPC001SAAN-RC,Sullins,C492400,,,,,,
+J6,1,COM,PinHeader_1x01_P2.54mm_Vertical,PRPC001SAAN-RC,Sullins,C492400,,,,,,
+J7,1,EXT_PWR,PinHeader_1x02_P2.54mm_Vertical,PRPC002SAAN-RC,Sullins,C492401,,,,,,Header 1x2 generico - Sullins PRPC002SAAN-RC nao disponivel na LCSC.
+J8,1,RELE,PinHeader_1x03_P2.54mm_Vertical,PRPC003SAAN-RC,Sullins,C2937625,,,,,,Header 1x3 generico - Sullins PRPC003SAAN-RC nao disponivel na LCSC.
+J9,1,LED_BTN,PinHeader_1x02_P2.54mm_Vertical,PRPC002SAAN-RC,Sullins,C492401,,,,,,Header 1x2 generico - Sullins PRPC002SAAN-RC nao disponivel na LCSC.
+"R1,R2,R3",3,330,Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal,CFR-25JB-52-330R,Yageo,C2935230,,,,,,Estoque JLCPCB baixo (718 pcs em 2026-09) - conferir antes de fechar o pedido.
+U1,1,Ra-02,RA-02_THT,Ra-02,Ai-Thinker,C90039,,,,,,JLCPCB: Standard PCBA apenas. Modulo em furos passantes (16 pinos) - montagem manual.

@@ -18,6 +18,8 @@ Perifericos
 
 from machine import Pin, SPI
 import utime
+import sys
+import select
 
 
 # ─────────────────────────────────────────────────────────────────
@@ -440,6 +442,11 @@ class CommandStation:
         # Estado de toggle para o efeito de piscar.
         self._blink_on = False
 
+        # Controle de comandos via serial (Thonny).
+        self._serial_arm = False
+        self._serial_abort = False
+        self._serial_mode = False
+
         # Estado de link com a estacao de ignicao.
         self._link_ok = False
         self._last_ping_ms = 0
@@ -448,6 +455,36 @@ class CommandStation:
         self._last_link_blink_ms = 0
         self._link_led_on = False
         self._last_mock_warn_ms = 0
+
+    # ─────────────────────────────────────────
+    #  COMANDOS SERIAIS (Thonny)
+    # ─────────────────────────────────────────
+    def _check_serial(self):
+        """
+        Le comandos do console serial de forma nao bloqueante.
+        Comandos: arm, abort, status, ping
+        """
+        if sys.stdin in select.select([sys.stdin], [], [], 0)[0]:
+            line = sys.stdin.readline()
+            if not line:
+                return
+            cmd = line.strip().lower()
+            if cmd == "arm":
+                print("[SERIAL] Comando: ARM")
+                self._serial_arm = True
+            elif cmd == "abort":
+                print("[SERIAL] Comando: ABORT")
+                self._serial_abort = True
+            elif cmd == "status":
+                print(f"[SERIAL] Estado: {self.state}")
+                print(f"[SERIAL] Link LoRa: {'OK' if self._link_ok else 'PERDIDO'}")
+                print(f"[SERIAL] Backend: {self.lora.backend}")
+            elif cmd == "ping":
+                print("[SERIAL] Enviando PING...")
+                self.lora.send(MSG_PING)
+            elif cmd:
+                print(f"[SERIAL] Descnhecido: {cmd}")
+                print("[SERIAL] Comandos: arm, abort, status, ping")
 
     # ─────────────────────────────────────────
     #  LEITURA COM DEBOUNCE
@@ -521,6 +558,7 @@ class CommandStation:
     # ─────────────────────────────────────────
     def _enter_idle(self):
         self._all_off()
+        self._serial_mode = False
         if self._link_ok:
             self.led_yellow.value(1)
         self.state = State.IDLE
@@ -560,8 +598,8 @@ class CommandStation:
     #  HANDLERS DE CADA ESTADO
     # ─────────────────────────────────────────
     def _handle_idle(self):
-        # Apenas aguarda o início do armamento quando o botão é pressionado.
         now = utime.ticks_ms()
+        self._check_serial()
         self._refresh_link(now)
 
         if self.lora.backend == "mock" and utime.ticks_diff(now, self._last_mock_warn_ms) >= 3000:
@@ -570,6 +608,15 @@ class CommandStation:
 
         if self._link_ok:
             self.led_yellow.value(1)
+
+        if self._serial_arm:
+            self._serial_arm = False
+            if not self._link_ok:
+                print("[CMD] Sem link LoRa. Armamento bloqueado.")
+                return
+            self._serial_mode = True
+            self._enter_arming()
+            return
 
         if self._button_pressed():
             if not self._link_ok:
@@ -580,15 +627,21 @@ class CommandStation:
             self._enter_arming()
 
     def _handle_arming(self):
-        # Se o botão for solto antes de 5 segundos, o processo é cancelado.
-        if not self._button_pressed():
+        self._check_serial()
+
+        if self._serial_abort:
+            self._serial_abort = False
+            print("[CMD] ABORT via serial.")
+            self._enter_aborting()
+            return
+
+        if not self._serial_mode and not self._button_pressed():
             print("[CMD] Botao solto antes dos 5 s - enviando ABORT.")
             self._enter_aborting()
             return
 
         now = utime.ticks_ms()
 
-        # Enquanto o botao estiver pressionado, mantem o receptor em contagem.
         if utime.ticks_diff(now, self._last_tx_ms) >= RETRANSMIT_MS:
             self._last_tx_ms = now
             self.lora.send(MSG_ARM)
@@ -608,24 +661,28 @@ class CommandStation:
             self._last_pong_ms = now
             self._link_ok = True
 
-        # Enquanto o botão estiver pressionado, pisca LED amarelo e buzzer.
         self._blink_tick()
 
         elapsed = utime.ticks_diff(now, self._press_start_ms)
         remaining = max(0, (HOLD_REQUIRED_MS - elapsed) // 1000)
 
-        # Exibe uma atualização de tempo a cada segundo.
         if elapsed // 1000 != (elapsed - 50) // 1000:
             print(f"[CMD] Armando... {remaining} s restantes.")
 
-        # Se o tempo minimo for atingido, continua transmitindo ate o DONE.
         if elapsed >= HOLD_REQUIRED_MS:
             self._enter_transmitting()
 
     def _handle_transmitting(self):
-        # Se o botão soltar durante a transmissão, aborta imediatamente.
-        if not self._button_pressed():
-            print("[CMD] Botão solto durante transmissão — ABORT.")
+        self._check_serial()
+
+        if self._serial_abort:
+            self._serial_abort = False
+            print("[CMD] ABORT via serial.")
+            self._enter_aborting()
+            return
+
+        if not self._serial_mode and not self._button_pressed():
+            print("[CMD] Botao solto durante transmissao — ABORT.")
             self._enter_aborting()
             return
 

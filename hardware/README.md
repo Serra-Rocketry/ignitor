@@ -12,7 +12,7 @@ O sistema possui duas estacoes independentes conectadas por LoRa 433 MHz:
 | Item | Qtd | Aplicacao | Observacao |
 | --- | --- | --- | --- |
 | Raspberry Pi Pico | 1 | Estacao de Comando | MCU RP2040 |
-| ESP32-C3 SuperMini | 1 | Estacao de Ignicao | MCU principal de ignicao |
+| ESP32 NodeMCU-32S | 1 | Estacao de Ignicao (SMD) | MCU principal de ignicao |
 | Modulo LoRa SX1278 433 MHz | 2 | Comando e Ignicao | Um por estacao |
 | Antena LoRa 433 MHz | 2 | Comando e Ignicao | Obrigatoria antes de energizar |
 | LED amarelo 5 mm | 2 | Status de link | Com resistor |
@@ -31,48 +31,53 @@ O sistema possui duas estacoes independentes conectadas por LoRa 433 MHz:
 | Pino | Funcao |
 | --- | --- |
 | GP0 | LoRa MISO |
-| GP1 | LoRa CS |
+| GP1 | LoRa CS (NSS) |
 | GP2 | LoRa SCK |
 | GP3 | LoRa MOSI |
 | GP4 | LoRa RESET |
 | GP15 | LoRa DIO0 |
 | GP11 | LED amarelo |
 | GP12 | LED vermelho |
-| GP13 | Botao ignicao |
+| GP13 | Botao de ignicao |
 | GP19 | Buzzer |
 | GP25 | LED onboard (link) |
 
-### Estacao de Ignicao - ESP32-C3 SuperMini
+> O buzzer toca uma melodia via PWM ao final de um ciclo de ignicao bem-sucedido.
 
-Pinagem oficial alinhada ao arquivo `firmware/micropython/estacao_ignicao_esp.py`.
+### Estacao de Ignicao - ESP32 NodeMCU-32S (placa SMD rev 2.2)
 
-| Pino | Funcao |
-| --- | --- |
-| GPIO4 | LoRa SCK |
-| GPIO6 | LoRa MOSI |
-| GPIO5 | LoRa MISO |
-| GPIO7 | LoRa CS |
-| GPIO3 | LoRa RESET |
-| GPIO21 | LoRa DIO0 |
-| GPIO20 | LED amarelo |
-| GPIO0 | LED vermelho |
-| GPIO1 | Buzzer |
-| GPIO10 | Rele/MOSFET (ignitor) |
-| GPIO8 | LED interno de link |
+Pinagem da `pcbignicao_smd` (footprint DIP-38):
 
-### Estacao de Ignicao - Raspberry Pi Pico (legado)
+| Pino | Funcao | Pino | Funcao |
+| --- | --- | --- | --- |
+| GPIO18 | LoRa SCK | GPIO27 | LED do botao (LED_BTN_K) |
+| GPIO19 | LoRa MISO | GPIO14 | Buzzer |
+| GPIO23 | LoRa MOSI | GPIO13 | Botao (BTN) |
+| GPIO5 | LoRa CS (NSS) | GPIO34 / 35 | CONT_A / CONT_B (so entrada) |
+| GPIO17 | LoRa RESET | GPIO32 | RELE_ARM (rele ativo em baixo) |
+| GPIO16 | LoRa DIO0 | GPIO21 / 22 | SDA / SCL (OLED) |
+| GPIO25 / 26 | LED_Y / LED_R | GPIO4, 2, 15, 0, 12, 33 | EXP1..EXP6 |
+| GPIO2 | LED interno de link | 5V / 3V3 | VSYS / 3,3 V |
+
+> Cuidado: EXP3..EXP5 (GPIO15, GPIO0, GPIO12) sao pinos de strapping — nao
+> podem ser puxados para o nivel errado durante o reset.
+
+### Estacao de Ignicao - Raspberry Pi Pico (variante THT rev 1.3)
 
 | Pino | Funcao |
 | --- | --- |
 | GP0 | LoRa MISO |
-| GP1 | LoRa CS |
+| GP1 | LoRa CS (NSS) |
 | GP2 | LoRa SCK |
 | GP3 | LoRa MOSI |
 | GP4 | LoRa RESET |
-| GP15 | LoRa DIO0 |
+| GP6 / GP7 | SDA / SCL (OLED) |
+| GP8 / GP9 | CONT_A / CONT_B (continuidade) |
 | GP11 | LED amarelo |
 | GP12 | LED vermelho |
+| GP16 | LED do botao (LED_BTN_K) |
 | GP19 | Buzzer |
+| GP21 | LoRa DIO0 |
 | GP26 | Rele/MOSFET (ignitor) |
 | GP25 | LED onboard (link) |
 
@@ -129,3 +134,5 @@ Todas as imagens abaixo usam largura padrao de 320 px para manter consistencia v
 - [fritzing](./fritzing): arquivos de esquematico/layout.
 - [gerbers](./gerbers): arquivos de fabricacao PCB.
 - [images](./images): imagens e esquemas.
+- [kicad](./kicad): projetos KiCad (comando, ignicao THT/SMD e bibliotecas).
+- [tools](./tools): scripts de automacao KiCad (organizacao, roteamento, fabricacao e DRC).
